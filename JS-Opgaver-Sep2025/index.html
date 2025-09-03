@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="index.js"></script>
+
+
+  <!-- Opgave 7 -->
+  <p id="text">Dette er den oprindelige tekst.</p>
+  <button id="changeTextButton">Skift tekst</button>
+
+  <script>
+    changeTextButton.addEventListener('click', () => {
+    text.textContent = 'Teksten er nu ændret!';
+  });
+</script>
+
+
+<!-- Opgave 8 -->
+<p>Antal klik: <span id="clickCount">0</span></p>
+<button id="clickButton">Klik mig</button>
+<!-- on click, incrementer 'click', set textinhold i 'clickcount' lig 'click' -->
+<script>
+let click = 0;
+clickButton.addEventListener('click', () => {
+  click++; 
+  clickCount.textContent = click;
+});
+</script>
+
+
+<!-- Opgave 9 -->
+ <input type="text" id="itemInput" placeholder="Skriv noget...">
+<button id="addItemButton">Tilføj</button>
+
+<ul id="itemList"></ul>
+<!-- 
+ 1. on click, lav et nyt <li> og smid det i 'newItem', 
+ 2. tag tekstinhold af 'itemInput' og indsæt dets værdi i 'newItem',
+ 3. derefter tag 'newItem' og gør det til child af 'itemList'
+  -->
+<script>
+addItemButton.addEventListener('click', () => {
+  const newItem = document.createElement('li')
+  newItem.textContent = itemInput.value;
+  itemList.appendChild(newItem);
+});
+</script>
+
+<!-- Opgave 10 -->
+
+
+
+</body>
+</html>
